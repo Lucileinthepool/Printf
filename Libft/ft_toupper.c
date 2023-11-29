@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lufreder <lufreder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 14:54:42 by lufreder          #+#    #+#             */
-/*   Updated: 2023/11/29 10:20:51 by lufreder         ###   ########.fr       */
+/*   Created: 2023/10/26 13:42:06 by lufreder          #+#    #+#             */
+/*   Updated: 2023/10/30 15:08:23 by lufreder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h> //pour gérer les variadic functions
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		c = (c - 32);
+	return (c);
+}
 
-#endif
+/*#include<stdio.h>
+
+int main(void)
+{
+    printf("%c", ft_toupper(49));
+    return (0);
+}*/

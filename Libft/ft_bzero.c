@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lufreder <lufreder@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 14:54:42 by lufreder          #+#    #+#             */
-/*   Updated: 2023/11/29 10:20:51 by lufreder         ###   ########.fr       */
+/*   Created: 2023/10/26 08:58:43 by lufreder          #+#    #+#             */
+/*   Updated: 2023/11/01 09:05:00 by lufreder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h> //pour gérer les variadic functions
+void	ft_bzero(void *s, size_t n)
+{
+	char	*temp_ptr;
 
-#endif
+	temp_ptr = (char *)s;
+	while (n > 0)
+	{
+		*temp_ptr = 0;
+		temp_ptr++;
+		n--;
+	}
+}
+/*#include<stdio.h>
+
+int	main(void)
+{
+	char str[] = "Hello";
+	ft_bzero(str, 5);
+
+	printf("%s\n", str);
+
+	return (0);
+}*/
